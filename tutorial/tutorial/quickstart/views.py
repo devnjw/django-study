@@ -2,8 +2,9 @@ from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
 from tutorial.quickstart.serializers import UserSerializer, GroupSerializer
 
+from django.contrib.auth.mixins import LoginRequiredMixin
 
-class UserViewSet(viewsets.ModelViewSet):
+class UserViewSet(viewsets.ModelViewSet, LoginRequiredMixin):
     """
     사용자(user)를 보거나 편집하는 API
     """
