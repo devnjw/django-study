@@ -1,5 +1,3 @@
-from site import venv
-from unicodedata import name
 from django.urls import path
 from django.conf.urls import include
 from rest_framework import routers
@@ -11,5 +9,4 @@ from rest_framework import routers
 # 그리고 API 탐색을 위해 로그인 URL을 추가했습니다.
 urlpatterns = [
     path('', include('tutorial.vuetify.urls')),
-    path('auth-api', include('rest_framework.urls', namespace='rest_framework')),
 ]

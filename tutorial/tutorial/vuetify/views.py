@@ -13,4 +13,4 @@ class VuetufyViewSet(APIView):
 
 
   def get(self, request):
-    return Response({'share':True})
+    return Response({'data':[30,40,45,50,49,60,70,91,125]})
